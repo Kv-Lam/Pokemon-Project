@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c46x23n6yxb5q"]
+
+[ext_resource type="Texture2D" uid="uid://c3i07cpq1yja5" path="res://assets/Player/RedWalking-removebg-preview.png" id="1_8djha"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q0go"]
+size = Vector2(16, 16)
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_8djha")
+centered = false
+hframes = 3
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_8q0go")
